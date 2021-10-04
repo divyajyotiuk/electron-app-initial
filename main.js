@@ -15,6 +15,9 @@ function createWindow () {
           preload: path.join(__dirname, 'preload.js')
       }
     })
+
+    const contents = win.webContents
+    console.log(contents)
   
     // load index.html of app
     win.loadFile('index.html')
@@ -23,7 +26,7 @@ function createWindow () {
     // win.loadURL('https://github.com')
 
     // Open the DevTools.
-    // mainWindow.webContents.openDevTools()
+    // win.webContents.openDevTools()
 }
 
 /**
